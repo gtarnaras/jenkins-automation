@@ -76,7 +76,7 @@ information.
 ### How to build locally
 
 ```sh
-mvn clean install -Plocal
+TODO
 ```
 
 
