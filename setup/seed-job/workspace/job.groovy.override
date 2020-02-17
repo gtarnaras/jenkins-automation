@@ -17,8 +17,7 @@ class ProjectDefinition {
 }
 
 def projectDefinitions = [
-        new ProjectDefinition('depositsolutions', 'jenkins-automation'),
-        new ProjectDefinition('scheleaap', 'jenkins-automation'),
+        new ProjectDefinition('gtarnaras', 'jenkins-automation'),
         // Add new entries here... Do not forget the comma at the end of the last line.
         // Use `.branches()` to limit the branches to build. For example:
         // new ProjectDefinition('myorg', 'myrepo').branches('master develop'),
@@ -32,6 +31,7 @@ projectDefinitions.each { projectDefinition ->
             git {
                 remote(repositoryUrl)
                 credentialsId('gitlab-key')
+                id = UUID.nameUUIDFromBytes(repositoryUrl.getBytes())
                 includes(projectDefinition.branches)
             }
         }

@@ -13,4 +13,5 @@ pom.xml.versionsBackup
 *.ipr
 *.iws
 .profile
+.history
 tmp/
