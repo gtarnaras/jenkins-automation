@@ -1,6 +1,6 @@
 # An example of how to set up Jenkins in a fully automated way
 
-[![Build Status](https://travis-ci.org/depositsolutions/jenkins-automation.svg?branch=master)](https://travis-ci.org/depositsolutions/jenkins-automation)
+[![Master Build Status](https://travis-ci.org/depositsolutions/jenkins-automation.svg?branch=master)](https://travis-ci.org/depositsolutions/jenkins-automation)
 
 Jenkins is a self-contained, open source automation server which can be used to automate all sorts of tasks such as
 building, testing, and deploying software.
@@ -13,11 +13,16 @@ has several problems:
 
 By completely automating the configuration of Jenkins:
 1. The configuration is completely traceable and changes to the configuration can be tracked over time.
-1. Configuration changes can be developed and tested locally.
-1. A new instance of Jenkins spun up and configured within minutes.
+2. Configuration changes can be developed and tested locally.
+3. A new instance of Jenkins spun up and configured within minutes.
 
+### How to build the image locally
 
-## How to start
+```sh
+docker build --tag auto-jenkins:latest .
+```
+
+## How to start the Jenkins docker image
 
 ```sh
 docker run \
@@ -25,7 +30,7 @@ docker run \
   --publish 8080:8080 \
   --detach \
   --restart always \
-  depositsolutions/jenkins-automation
+  auto-jenkins:latest
 ```
 
 In its default state, auto-jenkins has a single job called `seed-job` that creates the other jobs listed in the file
@@ -62,7 +67,7 @@ SMTP_PORT | SMTP server port number
 
 1. Clone the repository
    ```sh
-   git clone git@github.com:depositsolutions/jenkins-automation.git
+   git clone git@github.com:gtarnaras/jenkins-automation.git
    ```
 2. Locate the file `job.groovy.override` and add your repository to the list of `projectDefinitions`.
 
@@ -72,16 +77,13 @@ SMTP_PORT | SMTP server port number
 Just modify the file `plugins.txt` file. See also https://github.com/jenkinsci/docker#preinstalling-plugins for more
 information.
 
-
-### How to build locally
-
-```sh
-TODO
-```
-
-
 ## Literature
 
 * [Jenkins Job DSL API](https://jenkinsci.github.io/job-dsl-plugin/)
 * [Pipeline Steps Reference](https://jenkins.io/doc/pipeline/steps/)
 * [Jenkins Javadoc](http://javadoc.jenkins.io/)
+
+
+## Credits
+
+> Thanks https://github.com/depositsolutions/jenkins-automation for providing the initial repo. This repo is a fork.

@@ -24,7 +24,7 @@ def projectDefinitions = [
 ]
 
 projectDefinitions.each { projectDefinition ->
-    def repositoryUrl = 'git@github.com:' + projectDefinition.group + '/' + projectDefinition.project + '.git'
+    def repositoryUrl = 'https://github.com/' + projectDefinition.group + '/' + projectDefinition.project + '.git'
 
     multibranchPipelineJob(projectDefinition.project) {
         branchSources {
