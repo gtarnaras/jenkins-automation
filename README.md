@@ -22,6 +22,9 @@ By completely automating the configuration of Jenkins:
 docker build --tag auto-jenkins:latest .
 ```
 
+### Check that Jenkins is healthy
+The docker image comes with a healthcheck (./setup/healthchecks). Simply run a docker ps and have a look in the healthcheck.
+
 ## How to start the Jenkins docker image
 
 ```sh
@@ -76,6 +79,10 @@ SMTP_PORT | SMTP server port number
 
 Just modify the file `plugins.txt` file. See also https://github.com/jenkinsci/docker#preinstalling-plugins for more
 information.
+
+## FAQ
+
+See [FAQ](./documentation/FAQ.md)
 
 ## Literature
 

@@ -41,7 +41,7 @@ COPY setup/compute-seed-job-hash.sh /tmp/
 RUN /tmp/compute-seed-job-hash.sh /usr/share/jenkins/ref/jobs/seed-job/workspace/job.groovy.override /usr/share/jenkins/ref/scriptApproval.xml.override
 
 # Healthchecks
-HEALTHCHECK --interval=12s --timeout=12s --start-period=30s CMD node /usr/share/jenkins/healthchecks.js
+HEALTHCHECK --interval=12s --timeout=12s --start-period=60s CMD node /usr/share/jenkins/healthcheck.js
 
 # Ports
 EXPOSE 8080

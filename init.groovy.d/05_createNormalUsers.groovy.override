@@ -48,7 +48,7 @@ if (pluginManager.getPlugin('mailer')) {
   users.each { userDefinition ->
     def hudsonRealm = new HudsonPrivateSecurityRealm(false)
     def user = hudsonRealm.createAccount(userDefinition.userName, userDefinition.userName)
-    user.addProperty(new Mailer.UserProperty(userDefinition.emailAddress)); 
+    user.addProperty(new Mailer.UserProperty(userDefinition.emailAddress));
     instance.setSecurityRealm(hudsonRealm)
 
     permissions.each { permission ->
