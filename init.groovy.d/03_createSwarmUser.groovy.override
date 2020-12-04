@@ -20,6 +20,7 @@ def permissions = [
   Permission.fromId("hudson.model.Computer.Delete"),
   Permission.fromId("hudson.model.Computer.Disconnect"),
   Permission.fromId("hudson.model.Computer.Configure"),
+  Permission.fromId("hudson.model.Computer.Create"),
 ]
 
 def strategy = (GlobalMatrixAuthorizationStrategy) instance.getAuthorizationStrategy()
