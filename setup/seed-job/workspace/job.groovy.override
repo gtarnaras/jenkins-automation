@@ -17,7 +17,7 @@ class ProjectDefinition {
 }
 
 def projectDefinitions = [
-        new ProjectDefinition('gtarnaras', 'jenkins-automation'),
+        new ProjectDefinition('gtarnaras', 'jenkins-jobs'),
         // Add new entries here... Do not forget the comma at the end of the last line.
         // Use `.branches()` to limit the branches to build. For example:
         // new ProjectDefinition('myorg', 'myrepo').branches('master develop'),

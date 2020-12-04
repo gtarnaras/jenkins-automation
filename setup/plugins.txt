@@ -1,9 +1,9 @@
 ci-skip:0.0.2
 email-ext:2.68
-git:4.1.1
+git:4.2.2
 greenballs:1.15
 job-dsl:1.76
-mailer:1.23
+mailer:1.32.1
 matrix-auth:2.2
 rebuild:1.28
 workflow-aggregator:2.6
