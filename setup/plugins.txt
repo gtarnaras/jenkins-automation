@@ -9,3 +9,5 @@ rebuild:1.28
 workflow-aggregator:2.6
 workflow-multibranch:2.21
 blueocean:1.22.0
+ansicolor:0.7.3
+timestamper:1.11.8
